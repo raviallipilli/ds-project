@@ -1,26 +1,26 @@
+// JavaScript for search functionality
 document.addEventListener('DOMContentLoaded', function () {
-    // Select the search input field and table rows
     const searchInput = document.getElementById('search');
     const tableRows = document.querySelectorAll('tbody tr');
+    const noResultsRow = document.getElementById('no-results-row');
 
-    // Event listener for the 'keyup' event on the search input
     searchInput.addEventListener('keyup', function () {
-        // Retrieve the search term and convert it to lowercase for case-insensitive comparison
         const searchTerm = searchInput.value.toLowerCase();
+        let hasResults = false;
 
-        // Iterate over each table row
         tableRows.forEach(row => {
-            // Retrieve the text content of the first <td> element in the row
+            if (row.id === 'no-results-row') return; // Skip the no results row
+
             const task = row.querySelector('td').innerText.toLowerCase();
-            
-            // Check if the task text includes the search term
             if (task.includes(searchTerm)) {
-                // Show the row if it matches the search term
                 row.style.display = '';
+                hasResults = true;
             } else {
-                // Hide the row if it does not match the search term
                 row.style.display = 'none';
             }
         });
+
+        // Show or hide the "No results found" row based on whether there are any results
+        noResultsRow.style.display = hasResults ? 'none' : '';
     });
 });
