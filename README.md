@@ -84,6 +84,9 @@ Use the Update Status button in the edit form to toggle the completion status.
 ## Delete Items
 Click the Delete button next to a task to remove it from the list.
 
+## Header & Footer
+For code reusuabilty header and footers are added but none of the anchor tags work as they are just for visibility
+
 ## CSS Styling
 The application uses custom CSS to match the styling of Duality Studio. The styles are defined in public/css/app.css.
 

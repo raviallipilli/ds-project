@@ -50,17 +50,17 @@ input[type="text"], textarea {
 
 button, .btn {
     display: inline-block;
-    padding: 12px 20px;
+    padding: 6px 14px;
     border: none;
     border-radius: 1.5rem;
-    font-size: 16px;
+    font-size: 1.125rem;
+    line-height: 1.75rem;    
     cursor: pointer;
     text-align: center;
     transition: background-color 0.3s ease, transform 0.2s ease;
     color: #ffffff;
     text-decoration: none;
     margin-right: 10px;
-    text-transform: uppercase;
 }
 
 button:hover, .btn:hover {
@@ -103,6 +103,7 @@ button:active, .btn:active {
 .btn-cancel {
     background-color: #95a5a6;
     border: 1px solid #7f8c8d;
+    color: rgb(228 232 237 )!important;
 }
 
 .btn-cancel:hover {
@@ -122,8 +123,6 @@ li {
     align-items: center;
     padding: 15px;
     margin-bottom: 10px;
-    background-color: #ffffff;
-    border: 1px solid #e0e0e0;
     border-radius: 4px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
@@ -140,7 +139,8 @@ li span {
 
 a {
     text-decoration: none;
-    color: #3498db;
+    color: #3498db!important;
+    font-family: Montserrat, sans-serif;
 }
 
 a:hover {
@@ -257,6 +257,97 @@ tr:hover {
 .search-icon {
     position: absolute;
     left: 400px;
-    top: 193px; /* Adjust the position to fit inside the input */
+    top: 283px; /* Adjust the position to fit inside the input */
     color: #95a5a6;
+}
+
+/* Header styling */
+
+header {
+    color: black; /* White text color for contrast */
+    padding: 10px 0;
+    border-bottom: 0.001rem solid #7B1FA2; /* Slightly lighter border for separation */
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo a {
+    text-decoration: none;
+    color: black!important;
+    font-size: 1.5em;
+    font-weight: 600!important;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #FFD700; /* Change color on hover for better visibility */
+}
+
+
+/* Footer styling */
+footer {
+    background-color: rgb(48, 46, 89); /* Purple background color */
+    color: #fff; /* White text color for contrast */
+    padding: 20px 0;
+    text-align: center;
+    border-top: 1px solid #7B1FA2; /* Slightly lighter border for separation */
+    margin-top: 150px;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px; /* Added padding for spacing */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+}
+
+.footer-content p {
+    margin: 0;
+    flex: 1; 
+    text-align: left; 
+}
+
+.footer-content nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: flex-end; 
+    flex: 1; 
+}
+
+.footer-content nav ul li a {
+    text-decoration: none;
+    color: rgb(228 232 237 )!important; /* White color for better contrast used in Duality Studio*/
+    transition: color 0.3s; 
+    margin-left: 20px;
+}
+
+.footer-content nav ul li a:hover {
+    color: #FFD700; 
 }
