@@ -129,6 +129,27 @@ Additional tests: Includes simple behaviourial tests
 
 -------------------------------------------------------------------------------------------------------------------------------------
 
+### Login & Register using laravel breeze
+
+## Installation Steps
+---bash
+composer require laravel/breeze --dev
+
+php artisan breeze:install
+ 1. Select React
+ 2. Pick Innertia ssr
+ 3. Choose either PEST or PhpUnit fror testing
+
+php artisan migrate
+npm install
+npm run dev
+
+Login: Login pluggedin using React with Innertia
+Register: Login pluggedin using React with Innertia
+Dashboard: Simple dashboard front end view
+
+-------------------------------------------------------------------------------------------------------------------------------------
+
 ## Documentation
 The project is fully documented with comments and instructions where necessary. 
 For detailed information on specific features and codebase, refer to the codebase and comments within the files.
