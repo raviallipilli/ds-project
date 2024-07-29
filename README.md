@@ -147,6 +147,9 @@ npm run dev
 Login: Login pluggedin using React with Innertia
 Register: Login pluggedin using React with Innertia
 Dashboard: Simple dashboard front end view
+Profile: Default Profile view from laravel breeze install
+Items: Items layout is designed using PHP and React.js which has all CRUD features
+Items List: Items List is modified and plugged in the React view which uses PHP, HTML, Blade, CSS, JS, also has full CRUD features
 
 -------------------------------------------------------------------------------------------------------------------------------------
 

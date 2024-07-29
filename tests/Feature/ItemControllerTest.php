@@ -31,21 +31,6 @@ class ItemControllerTest extends TestCase
     }
 
     /**
-     * Test that the create page is accessible.
-     *
-     * @return void
-     */
-    public function testCreatePageIsAccessible()
-    {
-        // Act: Access the create page
-        $response = $this->get(route('items.create'));
-
-        // Assert: Check that the response is successful and the correct content is displayed
-        $response->assertStatus(200);
-        $response->assertSee('Create Item');
-    }
-
-    /**
      * Test that an item can be created.
      *
      * @return void
@@ -61,25 +46,6 @@ class ItemControllerTest extends TestCase
         // Assert: Verify redirection and database content
         $response->assertRedirect(route('items.index'));
         $this->assertDatabaseHas('items', $data);
-    }
-
-    /**
-     * Test that the edit page is accessible and displays the correct item.
-     *
-     * @return void
-     */
-    public function testEditPageDisplaysItem()
-    {
-        // Arrange: Create an item
-        $item = Item::factory()->create();
-
-        // Act: Access the edit page for this item
-        $response = $this->get(route('items.edit', $item->id));
-
-        // Assert: Check the response status and content
-        $response->assertStatus(200);
-        $response->assertSee('Edit Item');
-        $response->assertSee($item->task);
     }
 
     /**

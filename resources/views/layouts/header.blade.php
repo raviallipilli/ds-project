@@ -3,7 +3,7 @@
         <!-- Logo section -->
         <div class="logo">
             <!-- Link to the homepage -->
-            <a href="{{ url('/') }}">Simple App</a>
+            <a href="{{ url('/') }}">Simple App using PHP, Blade, HTML, CSS, JS</a>
         </div>
         <!-- Navigation menu -->
         <nav>

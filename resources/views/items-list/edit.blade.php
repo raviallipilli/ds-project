@@ -7,7 +7,7 @@
 <h1>Edit Item</h1>
 
 <!-- Form to edit an existing item -->
-<form action="{{ route('items.update', $item->id) }}" method="POST">
+<form action="{{ route('items-list.update', $item->id) }}" method="POST">
     @csrf
     @method('PUT')
     
@@ -26,7 +26,7 @@
     <!-- Action buttons for form submission and cancellation -->
     <div class="actions">
         <button type="submit" class="btn btn-edit">Update</button>
-        <a href="{{ route('items.index') }}" class="btn btn-cancel">Cancel</a>
+        <a href="{{ route('items-list.index') }}" class="btn btn-cancel">Cancel</a>
     </div>
 </form>
 

@@ -256,7 +256,7 @@ tr:hover {
 
 .search-icon {
     position: absolute;
-    left: 400px;
+    left: 340px;
     top: 283px; /* Adjust the position to fit inside the input */
     color: #95a5a6;
 }

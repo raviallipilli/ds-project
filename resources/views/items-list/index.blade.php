@@ -6,7 +6,7 @@
     <h1>Item List</h1>
 
     <!-- Form to navigate to the item creation page -->
-    <form action="{{ route('items.create') }}" method="GET" style="display:inline">
+    <form action="{{ route('items-list.create') }}" method="GET" style="display:inline">
         <button type="submit" class="btn btn-create">Create New Item</button>
     </form>
 
@@ -33,11 +33,11 @@
                     <td>{{ $item->is_complete ? 'Complete' : 'Incomplete' }}</td>
                     <td>
                         <!-- Form to navigate to the item editing page -->
-                        <form action="{{ route('items.edit', $item->id) }}" method="GET" style="display:inline">
+                        <form action="{{ route('items-list.edit', $item->id) }}" method="GET" style="display:inline">
                             <button type="submit" class="btn btn-edit">Edit</button>
                         </form>
                         <!-- Form to delete an item, includes CSRF token and method spoofing -->
-                        <form action="{{ route('items.destroy', $item->id) }}" method="POST" style="display:inline">
+                        <form action="{{ route('items-list.destroy', $item->id) }}" method="POST" style="display:inline">
                             @csrf
                             @method('DELETE')
                             <button type="submit" class="btn btn-delete">Delete</button>
